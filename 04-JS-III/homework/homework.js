@@ -37,7 +37,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push(elemento)
+  return array.push(elemento)
 }
 
 
@@ -46,7 +46,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array.unshift(elemento)
+  return array.unshift(elemento)
 }
 
 
@@ -56,7 +56,11 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  
+  let frase = [];
+  for(let i = 0; i < palabras.length; i++) {
+    frase = frase + " " + palabras[0];
+  }
+  return frase;
 }
 
 
@@ -64,6 +68,10 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] === elemento) {return true}
+    else {return false}
+  }
 }
 
 
@@ -71,6 +79,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let suma= 0
+  for(let i = 0; i < numeros.length; i++) {
+    suma = suma + numero[i]
+  }
+  return suma;
 }
 
 
@@ -78,6 +91,11 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let promedio = 0;
+  for(let i = 0; i < resultadosTest.length; i++) {
+    promedio = promedio + resultadosTest[i]
+  }
+  return promedio / resultadosTest.length-1 
 }
 
 
@@ -85,6 +103,13 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let numeroMasGrande = 0;
+  for(let i = 0 ; i < numeros.length; i++){
+    if(numeros[0] > numeroMasGrande) {
+      numeroMasGrande = numeros[0];
+    }
+  }
+  return numeroMasGrande;
 }
 
 
@@ -92,6 +117,9 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  
+  let arguments = 0;
+
 }
 
 
