@@ -21,8 +21,10 @@ function numberOfCharacters(string) {
   //Escribe tu código aquí
   let obj = {};
   for (let i = 0; i < string.length; i++) {
-    if () {}
+    if (obj[string[i]]) {obj[string[i]] = obj[string[i]] + 1;}
+    else {obj[string[i]] = 1}
   }
+  return obj;
 }
 
 
@@ -31,6 +33,15 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  let nuevoString = "";
+  let resto = "";
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === s[i].toUpperCase()) {
+      nuevoString += s[i];
+    }
+    else {resto += s[i];}
+  }
+  return nuevoString + resto;
 }
 
 
@@ -40,6 +51,12 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  let array = str.split(" ");
+  let frase = [];
+  for (let i = 0; i < array.length; i++) {
+    frase.push(array[i].split("").reverse().join(""));
+  }
+  return frase.join(" ");
 } 
 
 
